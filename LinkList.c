@@ -21,12 +21,30 @@ void bubbleSort();
 void swap(struct node*,struct node*);
 int maximum_no();
 void insert_noduplicates();
+void reverse();
 int count = 0;
  
 int main() {
     
    return 0;
 }
+void reverse() 
+{ 
+    struct node *prev = NULL; 
+    struct node *current = start; 
+    struct node *next = NULL; 
+    while (current != NULL) { 
+ 
+        next = current->next; 
+  
+        current->next = prev; 
+        
+        prev = current; 
+        
+        current = next; 
+    } 
+    start = prev; 
+} 
 int maximum_no(){
 
     struct node *t;
