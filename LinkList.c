@@ -7,22 +7,24 @@ struct node {
    struct node *next;
 };
  // Link List will end when user input -1 as input into Link List
-struct node *start = NULL;
-void insert_at_begin(int);
-void insert_at_end(int);
-void traverse();
-void delete_from_begin();
-void delete_from_end();
-void insert();
-void print();
-int search(int);
-int del_element(int);
-void bubbleSort();
-void swap(struct node*,struct node*);
-int maximum_no();
-void insert_noduplicates();
-void reverse();
-int count = 0;
+
+struct node *start = NULL;          // this is start pointer this contains the address of starting element of Link List
+
+void insert_at_begin(int); // insert element at start of Link List
+void insert_at_end(int);   // insert element at end of Link List 
+void traverse();           // print current Link List 
+void delete_from_begin();  // delete 1st element in Link List  
+void delete_from_end();    // delete Last element in Link List 
+void insert();             // prompts user to input data into Link List 
+void print();              // prints the current Link List (same as traverse() function below)
+int search(int);           // search for a element in present Link List and returns "1" if successfull otherwise returns "0"  
+int del_element(int);      // first searches element if present in Link List and delete its node   
+void bubbleSort();         // This function sorts the Link List in ascending order using Bubble Sorting technique 
+void swap(struct node*,struct node*);  // common swap() function used while sorting 
+int maximum_no();             // return the maximum number present in current Link List   
+void insert_noduplicates();   // same as insert() but if duplicates are entered it is not entered into Link List
+void reverse();             // reverse the order of Link List(start pointer start from last node)
+int count = 0;              // contains value of number of nodes in present Link List(count=0 if no Link List)
  
 int main() {
     
