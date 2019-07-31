@@ -6,7 +6,7 @@ struct node {
    int data;
    struct node *next;
 };
- 
+ // Link List will end when user input -1 as input into Link List
 struct node *start = NULL;
 void insert_at_begin(int);
 void insert_at_end(int);
